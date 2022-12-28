@@ -15,7 +15,7 @@ public class MemberService {
 
     /* 회원가입 */
     @Transactional
-    public void signup(SignupRequestDto requestDto) {
+    public Member signup(SignupRequestDto requestDto) {
         Member member = Member.builder()
                 .email(requestDto.getEmail())
                 .password(requestDto.getPassword())
@@ -23,7 +23,8 @@ public class MemberService {
                 .nickname(requestDto.getNickname())
                 .build();
 
-        memberRepository.save(member);
+        Long id = memberRepository.save(member).getId();
+        return memberRepository.findById(id).orElseThrow();
     }
 
     /* 닉네임 중복검사 */

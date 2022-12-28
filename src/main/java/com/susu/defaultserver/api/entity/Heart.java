@@ -1,9 +1,7 @@
 package com.susu.defaultserver.api.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -11,26 +9,26 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class PostLike {
+public class Heart {
 
     @Id
     @Column(name = "like_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
-    private int count;
-
-    @Column
-    private boolean isPressed;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     @JsonIgnore
-    private Member likeAuthor;
+    private Member member;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "post_id")
     @JsonIgnore
-    private Post likePost;
+    private Post post;
+
+    @Builder
+    public Heart(Member member, Post post) {
+        this.member = member;
+        this.post = post;
+    }
 }

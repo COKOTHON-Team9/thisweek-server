@@ -22,20 +22,20 @@ public class Comment extends BaseTimeEntity {
     @Column
     private String content;
 
-    @ManyToOne
-    @JoinColumn(name = "member_id") // 댓글 작성자 정보, 단방향
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
     @JsonIgnore
-    private Member author;
+    private Member member;
 
-    @ManyToOne
-    @JoinColumn(name = "post_id") // 원본 게시글 정보, 양방향
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "post_id")
     @JsonIgnore
-    private Post originalPost;
+    private Post post;
 
     @Builder
-    public Comment(String content, Member member, Post originalPost) {
+    public Comment(String content, Member member, Post post) {
         this.content = content;
-        this.author = member;
-        this.originalPost = originalPost;
+        this.member = member;
+        this.post = post;
     }
 }

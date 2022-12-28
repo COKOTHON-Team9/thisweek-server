@@ -1,5 +1,6 @@
 package com.susu.defaultserver.api.controller;
 
+import com.susu.defaultserver.api.entity.Member;
 import com.susu.defaultserver.api.service.MemberService;
 import com.susu.defaultserver.api.service.dto.SignupRequestDto;
 import com.susu.defaultserver.response.ApiResponse;
@@ -19,8 +20,8 @@ public class MemberController {
     @PostMapping("/member/signup") // 회원가입 처리
     public ApiResponse memberSignup(@RequestBody SignupRequestDto requestDto) {
 
-        memberService.signup(requestDto);
+        Member member = memberService.signup(requestDto);
 
-        return ApiResponse.success("msg", "회원가입 완료");
+        return ApiResponse.success("result", member);
     }
 }

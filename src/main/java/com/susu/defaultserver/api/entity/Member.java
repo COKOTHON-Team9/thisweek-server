@@ -23,8 +23,8 @@ public class Member extends BaseTimeEntity {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "profile")
-    private String profile;
+//    @Column(name = "profile")
+//    private String profile;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -38,12 +38,13 @@ public class Member extends BaseTimeEntity {
     @JsonIgnore
     private List<Post> posts;
 
+
     // 회원가입용 builder
     @Builder
     public Member(String email, String password, String profile, String nickname) {
         this.email = email;
         this.password = password;
-        this.profile = profile;
+//        this.profile = profile;
         this.role = Role.MEMBER;
         this.nickname = nickname;
     }
