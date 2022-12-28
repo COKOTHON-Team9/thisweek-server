@@ -35,8 +35,3 @@ out/
 
 ### VS Code ###
 .vscode/
-
-### Production !!! ###
-*.pem
-/src/main/resources/*.properties
-/src/main/resources/*.yml
