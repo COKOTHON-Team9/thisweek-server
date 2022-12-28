@@ -2,6 +2,7 @@ package com.susu.defaultserver.api.service;
 
 import com.susu.defaultserver.api.entity.Member;
 import com.susu.defaultserver.api.repository.MemberRepository;
+import com.susu.defaultserver.api.service.dto.LoginRequestDto;
 import com.susu.defaultserver.api.service.dto.SignupRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -31,5 +32,17 @@ public class MemberService {
     @Transactional
     public boolean checkNickname(String nickname) {
         return memberRepository.existsByNickname(nickname);
+    }
+
+    /* 로그인 요청 */
+    @Transactional
+    public Member login(LoginRequestDto requestDto) {
+        String email = requestDto.getEmail();
+        String password = requestDto.getPassword();
+
+        if (memberRepository.existsByEmailAndPassword(email, password)) {
+            return memberRepository.findMemberByEmail(email);
+        }
+        else return null;
     }
 }

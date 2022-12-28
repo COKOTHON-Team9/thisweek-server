@@ -29,6 +29,6 @@ public class ApiResponse<T> {
     }
 
     public static <T> ApiResponse<T> fail() {
-        return new ApiResponse(new ApiResponseHeader(FAILED, FAILED_MESSAGE), null);
+        return new ApiResponse(new ApiResponseHeader(NOT_FOUND, NOT_FOUND_MESSAGE), null);
     }
 }
