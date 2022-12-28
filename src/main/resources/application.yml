@@ -10,7 +10,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://susu-mysql.c5c4kh5pkizm.ap-northeast-2.rds.amazonaws.com:3306/cokothon_demo?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
     username: susu
-    password:
+    password: dhkzk*3*
     hikari:
       pool-name: jpa-hikari-pool
       maximum-pool-size: 5
