@@ -3,6 +3,8 @@
 청춘들에게 이번 주의 문화생활을 제안하고 의견을 나누는 커뮤니티 웹 서비스
 ```ThisWeek``` 의 서버 레포지토리입니다.
 
+### 🏆 제1회 국민대학교X숙명여자대학교 연합해커톤 COKOTHON 우수상 수상
+
 
 ## 👩🏻‍💻 Credit
 <img src="https://img.shields.io/badge/oxksusu-000000?style=for-the-badge&logo=Github&logoColor=white">
