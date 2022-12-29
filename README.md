@@ -3,6 +3,10 @@
 청춘들에게 이번 주의 문화생활을 제안하고 의견을 나누는 커뮤니티 웹 서비스
 ```ThisWeek``` 의 서버 레포지토리입니다.
 
+
+## 👩🏻‍💻 Credit
+<img src="https://img.shields.io/badge/oxksusu-000000?style=for-the-badge&logo=Github&logoColor=white">
+
 ## ✏️ Description
 ```Home```과 ```Community``` 기능으로 나뉩니다.
 
@@ -21,15 +25,10 @@
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
 <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
-<br>
 <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white">
 <img src="https://img.shields.io/badge/Amazon EC2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white">
 <img src="https://img.shields.io/badge/Amazon RDS-527FFF?style=for-the-badge&logo=amazonrds&logoColor=white">
-
 ![img.png](img.png)
 
 ## 🚀 API documentation
 [🔗 포스트맨 API 문서화 링크](https://documenter.getpostman.com/view/20763232/2s8Z6x4ZUB)
-
-## 👩🏻‍💻 Credit
-<img src="https://img.shields.io/badge/oxksusu-000000?style=for-the-badge&logo=Github&logoColor=white">
